@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drum Lesson Attendance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Drum Lesson Attendance Tracker</h1>
+
+  <form id="attendance-form">
+    <label for="student-name">Student Name:</label>
+    <input type="text" id="student-name" required>
+
+    <label for="status">Status:</label>
+    <select id="status">
+      <option value="Present">Present</option>
+      <option value="Absent">Absent</option>
+    </select>
+
+    <button type="submit">Mark Attendance</button>
+  </form>
+
+  <hr>
+
+  <h2>Attendance Records</h2>
+  <table id="attendance-table">
+    <thead>
+      <tr>
+        <th>Student</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Records will be inserted here -->
+    </tbody>
+  </table>
+
+  <button id="export-csv">Export CSV</button>
+
+  <script src="main.js"></script>
+</body>
+</html>
