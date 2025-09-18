@@ -1,0 +1,9 @@
+/* Variables to easily edit theme etc at a later date */
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --accent-2: #60a5fa;
+}
