@@ -81,7 +81,12 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
   loadRecords();
   renderTable();
+
+  const form = document.getElementById("attendance-form");
+  const exportBtn = document.getElementById("export-csv");
+
   form.addEventListener("submit", onSubmit);
   exportBtn.addEventListener("click", exportCSV);
 }
+
 
