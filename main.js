@@ -73,3 +73,15 @@ function exportCSV() {
   a.download = "attendance.csv";
   a.click();
 }
+
+//Initialization
+// - Ensures the DOM is ready before attaching listeners.
+// - Loads saved data and sets up the UI.
+document.addEventListener("DOMContentLoaded", init);
+function init() {
+  loadRecords();
+  renderTable();
+  form.addEventListener("submit", onSubmit);
+  exportBtn.addEventListener("click", exportCSV);
+}
+
