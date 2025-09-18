@@ -16,3 +16,12 @@ function saveRecords() {
   localStorage.setItem("attendance", JSON.stringify(records));
 }
 
+//Utility functions
+//- todayISO() gives a consistent date format.
+// - normalizeDate() ensures we always have a valid date, even if the user leaves it blank
+function todayISO() {
+  return new Date().toISOString().split("T")[0];
+}
+function normalizeDate(input) {
+  return input && input.length ? input : todayISO();
+}
