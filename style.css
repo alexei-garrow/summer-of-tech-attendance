@@ -9,6 +9,11 @@
 }
 
 /* Global resets */
+/*- box-sizing: border-box ensures padding doesn’t break layouts.
+- margin: 0 removes default browser spacing.
+- system-ui uses the native font of the OS for a clean look.
+- The gradient background adds depth without being distracting.
+*/
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -19,6 +24,7 @@ body {
 }
 
 /* Card layouts */
+/* Cards visually separate sections (form, table, etc.). Rounded corners and shadows give a modern, tactile feel. */
 .card {
   background: var(--card);
   border: 1px solid #1f2937;
@@ -27,3 +33,4 @@ body {
   margin-bottom: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
+
