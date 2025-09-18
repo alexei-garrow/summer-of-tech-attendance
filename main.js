@@ -56,3 +56,20 @@ function renderTable() {
     tbody.appendChild(tr);
   }
 }
+
+//CSV export 
+// - Converts structured data to CSV format.
+// - Uses Blob and anchor tag to trigger download.
+// - No external libraries needed — just native JS.
+function exportCSV() {
+  const headers = ["Student", "Date", "Status"];
+  const rows = records.map(r => [r.student, r.date, r.status]);
+  const csv = [headers, ...rows].map(row => row.join(",")).join("\n");
+
+  const blob = new Blob([csv], { type: "text/csv" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "attendance.csv";
+  a.click();
+}
