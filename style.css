@@ -61,3 +61,24 @@ form button {
   grid-column: span 2;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
 }
+
+/* Table styling */
+/* - Full-width table for readability.
+- Hover effect helps users track rows visually.
+- Borders and padding improve legibility.
+*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #1f2937;
+}
+
+tbody tr:hover { background: #0c1424;
+}
+
