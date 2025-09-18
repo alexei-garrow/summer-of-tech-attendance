@@ -41,3 +41,18 @@ function onSubmit(e) {
   saveRecords();
   renderTable();
 }
+
+//Table rendering
+// - Clears and rebuilds the table every time.
+// - Keeps the UI in sync with the data.
+// - Easy to extend later with filters or sorting
+
+function renderTable() {
+  const tbody = document.querySelector("#attendance-table tbody");
+  tbody.innerHTML = "";
+  for (const r of records) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${r.student}</td><td>${r.date}</td><td>${r.status}</td>`;
+    tbody.appendChild(tr);
+  }
+}
