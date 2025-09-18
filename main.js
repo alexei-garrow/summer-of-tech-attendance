@@ -32,6 +32,11 @@ function normalizeDate(input) {
 // - Adds the new record and updates the UI.
 function onSubmit(e) {
   e.preventDefault();
+
+  const studentEl = document.getElementById("student-name");
+  const statusEl = document.getElementById("status");
+  const dateEl = document.getElementById("date");
+
   const student = studentEl.value.trim();
   const status = statusEl.value;
   const date = normalizeDate(dateEl.value);
@@ -41,6 +46,7 @@ function onSubmit(e) {
   saveRecords();
   renderTable();
 }
+
 
 //Table rendering
 // - Clears and rebuilds the table every time.
