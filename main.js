@@ -25,3 +25,19 @@ function todayISO() {
 function normalizeDate(input) {
   return input && input.length ? input : todayISO();
 }
+
+//Forum submission logic
+//- Prevents page reload (e.preventDefault()).
+// - Validates and normalizes input.
+// - Adds the new record and updates the UI.
+function onSubmit(e) {
+  e.preventDefault();
+  const student = studentEl.value.trim();
+  const status = statusEl.value;
+  const date = normalizeDate(dateEl.value);
+
+  const newRecord = { student, date, status };
+  records.push(newRecord);
+  saveRecords();
+  renderTable();
+}
